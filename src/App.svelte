@@ -1,6 +1,6 @@
 <script>
 	let bpm = 120;
-	let ms = 60000 / bpm;
+	$: ms = Math.round(60000 / bpm);
 </script>
 
 <header>
