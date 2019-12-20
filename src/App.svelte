@@ -1,6 +1,16 @@
 <script>
 	let bpm = 120;
-	$: ms = Math.round(60000 / bpm);
+	let ms = 500;
+
+	function setBothFromBPM(value) {
+		bpm = value;
+		ms = Math.round(60000 / bpm);
+	}
+	function setBothFromMs(value) {
+		ms = value;
+		bpm = Math.round((60 / ms) * 1000);
+	}
+
 </script>
 
 <header>
@@ -9,12 +19,23 @@
 </header>
 <main>
 	<label>
-		<input type="number" bind:value={bpm}>
+		<input
+			type="number"
+			value={bpm}
+			on:input="{ event => setBothFromBPM(event.target.value)}"
+		/>
 		bpm
 	</label>
+
 	<label>
-		At {bpm} one quarter note have a duration of {ms}ms.
+		<input
+			type="number"
+			value={ms}
+			on:input="{ event => setBothFromMs(event.target.value)}"
+		/>
+		ms
 	</label>
+		At {bpm}bpm one quarter note have a duration of {ms}ms.
 	<!-- <img src={metronome} alt="Colourfull metronome graphic"/> -->
 </main>
 
