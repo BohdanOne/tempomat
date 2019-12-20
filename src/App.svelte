@@ -3,11 +3,12 @@
 	let ms = 500;
 
 	function setBothFromBPM(value) {
-		bpm = value;
+		bpm = +value;
 		ms = Math.round(60000 / bpm);
 	}
+
 	function setBothFromMs(value) {
-		ms = value;
+		ms = +value;
 		bpm = Math.round((60 / ms) * 1000);
 	}
 
@@ -15,12 +16,13 @@
 
 <header>
 	<h1>Tempomat</h1>
-	<h2>Convert BPM to MS</h2>
+	<h2>Convert BeatsPerMinute to MilliSeconds</h2>
 </header>
 <main>
 	<label>
 		<input
 			type="number"
+			min="1"
 			value={bpm}
 			on:input="{ event => setBothFromBPM(event.target.value)}"
 		/>
@@ -30,6 +32,7 @@
 	<label>
 		<input
 			type="number"
+			min="1"
 			value={ms}
 			on:input="{ event => setBothFromMs(event.target.value)}"
 		/>
@@ -55,15 +58,14 @@
 	}
 
 	input {
-		max-width: 100px;
+		max-width: 5em;
 		border-radius: 1em;
+		border-color: #4c00ff;
 		outline-color: orange;
 		-moz-outline-radius: 1em;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	label {
+		color: #4c00ff;
 	}
 </style>

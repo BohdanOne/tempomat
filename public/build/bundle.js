@@ -333,7 +333,7 @@ var app = (function () {
     			h1.textContent = "Tempomat";
     			t1 = space();
     			h2 = element("h2");
-    			h2.textContent = "Convert BPM to MS";
+    			h2.textContent = "Convert BeatsPerMinute to MilliSeconds";
     			t3 = space();
     			main = element("main");
     			label0 = element("label");
@@ -348,23 +348,27 @@ var app = (function () {
     			t9 = text("bpm one quarter note have a duration of ");
     			t10 = text(/*ms*/ ctx[1]);
     			t11 = text("ms.");
-    			attr_dev(h1, "class", "svelte-1bdvu8u");
-    			add_location(h1, file, 16, 1, 235);
-    			add_location(h2, file, 17, 1, 254);
-    			attr_dev(header, "class", "svelte-1bdvu8u");
-    			add_location(header, file, 15, 0, 225);
+    			attr_dev(h1, "class", "svelte-1uo7azn");
+    			add_location(h1, file, 17, 1, 238);
+    			add_location(h2, file, 18, 1, 257);
+    			attr_dev(header, "class", "svelte-1uo7azn");
+    			add_location(header, file, 16, 0, 228);
     			attr_dev(input0, "type", "number");
+    			attr_dev(input0, "min", "1");
     			input0.value = /*bpm*/ ctx[0];
-    			attr_dev(input0, "class", "svelte-1bdvu8u");
-    			add_location(input0, file, 21, 2, 309);
-    			add_location(label0, file, 20, 1, 299);
+    			attr_dev(input0, "class", "svelte-1uo7azn");
+    			add_location(input0, file, 22, 2, 333);
+    			attr_dev(label0, "class", "svelte-1uo7azn");
+    			add_location(label0, file, 21, 1, 323);
     			attr_dev(input1, "type", "number");
+    			attr_dev(input1, "min", "1");
     			input1.value = /*ms*/ ctx[1];
-    			attr_dev(input1, "class", "svelte-1bdvu8u");
-    			add_location(input1, file, 30, 2, 442);
-    			add_location(label1, file, 29, 1, 432);
-    			attr_dev(main, "class", "svelte-1bdvu8u");
-    			add_location(main, file, 19, 0, 291);
+    			attr_dev(input1, "class", "svelte-1uo7azn");
+    			add_location(input1, file, 32, 2, 477);
+    			attr_dev(label1, "class", "svelte-1uo7azn");
+    			add_location(label1, file, 31, 1, 467);
+    			attr_dev(main, "class", "svelte-1uo7azn");
+    			add_location(main, file, 20, 0, 315);
 
     			dispose = [
     				listen_dev(input0, "input", /*input_handler*/ ctx[4], false, false, false),
@@ -432,12 +436,12 @@ var app = (function () {
     	let ms = 500;
 
     	function setBothFromBPM(value) {
-    		$$invalidate(0, bpm = value);
+    		$$invalidate(0, bpm = +value);
     		$$invalidate(1, ms = Math.round(60000 / bpm));
     	}
 
     	function setBothFromMs(value) {
-    		$$invalidate(1, ms = value);
+    		$$invalidate(1, ms = +value);
     		$$invalidate(0, bpm = Math.round(60 / ms * 1000));
     	}
 
