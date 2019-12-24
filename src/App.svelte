@@ -1,4 +1,5 @@
 <script>
+	import Header from './Header.svelte';
 	let bpm = 120;
 	let ms = 500;
 
@@ -14,11 +15,8 @@
 
 </script>
 
-<header>
-	<h1>Tempomat</h1>
-	<h2>Convert BeatsPerMinute to MilliSeconds</h2>
-</header>
-<main>
+<Header />
+<main class="App">
 	<label>
 		<input
 			type="number"
@@ -39,30 +37,23 @@
 		ms
 	</label>
 		At {bpm}bpm one quarter note have a duration of {ms}ms.
-	<!-- <img src={metronome} alt="Colourfull metronome graphic"/> -->
 </main>
 
 <style>
-	main,
-	header {
+	.App {
 		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #4c00ff;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 300;
+		padding: 1rem;
+		background: #D3CCE3;
+  	background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+		background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
 	}
 
 	input {
-		max-width: 5em;
-		border-radius: 1em;
+		max-width: 5rem;
+		border-radius: 1rem;
 		border-color: #4c00ff;
 		outline-color: orange;
-		-moz-outline-radius: 1em;
+		-moz-outline-radius: 1rem;
 	}
 
 	label {
