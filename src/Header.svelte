@@ -1,4 +1,4 @@
-<header class="Header">
+<header>
   <div class="main-heading">
 	  <img src="./assets/metronome.svg" alt="Colourfull metronome graphic"/>
 	  <h1>Tempomat</h1>
@@ -7,7 +7,7 @@
 </header>
 
 <style>
-  .Header {
+  header {
     background: #D3CCE3;
     background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
     background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);

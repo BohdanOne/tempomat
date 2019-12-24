@@ -16,7 +16,7 @@
 </script>
 
 <Header />
-<main class="App">
+<main>
 	<label>
 		<input
 			type="number"
@@ -40,7 +40,7 @@
 </main>
 
 <style>
-	.App {
+	main {
 		text-align: center;
 		padding: 1rem;
 		background: #D3CCE3;
