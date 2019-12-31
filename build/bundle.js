@@ -348,15 +348,15 @@ var app = (function () {
     			h2.textContent = "Easily convert BeatsPerMinute to MilliSeconds";
     			if (img.src !== (img_src_value = "./assets/metronome.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Colourfull metronome graphic");
-    			attr_dev(img, "class", "svelte-8qm1a8");
+    			attr_dev(img, "class", "svelte-lactav");
     			add_location(img, file, 2, 3, 41);
-    			attr_dev(h1, "class", "svelte-8qm1a8");
+    			attr_dev(h1, "class", "svelte-lactav");
     			add_location(h1, file, 3, 3, 115);
-    			attr_dev(div, "class", "main-heading svelte-8qm1a8");
+    			attr_dev(div, "class", "main-heading svelte-lactav");
     			add_location(div, file, 1, 2, 11);
-    			attr_dev(h2, "class", "svelte-8qm1a8");
+    			attr_dev(h2, "class", "svelte-lactav");
     			add_location(h2, file, 5, 1, 143);
-    			attr_dev(header, "class", "svelte-8qm1a8");
+    			attr_dev(header, "class", "svelte-lactav");
     			add_location(header, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -429,11 +429,11 @@ var app = (function () {
     			main = element("main");
     			label0 = element("label");
     			input0 = element("input");
-    			t0 = text("\n\t\tbpm");
+    			t0 = text("\n\t\tBPM");
     			t1 = space();
     			label1 = element("label");
     			input1 = element("input");
-    			t2 = text("\n\t\tms");
+    			t2 = text("\n\t\tMS");
     			t3 = text("\n\t\tAt ");
     			t4 = text(/*bpm*/ ctx[0]);
     			t5 = text("bpm one quarter note have a duration of ");
@@ -442,18 +442,18 @@ var app = (function () {
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "1");
     			input0.value = /*bpm*/ ctx[0];
-    			attr_dev(input0, "class", "svelte-pnda70");
+    			attr_dev(input0, "class", "svelte-fzx7t4");
     			add_location(input0, file$1, 19, 2, 247);
-    			attr_dev(label0, "class", "svelte-pnda70");
+    			attr_dev(label0, "class", "svelte-fzx7t4");
     			add_location(label0, file$1, 18, 1, 237);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "min", "1");
     			input1.value = /*ms*/ ctx[1];
-    			attr_dev(input1, "class", "svelte-pnda70");
+    			attr_dev(input1, "class", "svelte-fzx7t4");
     			add_location(input1, file$1, 29, 2, 391);
-    			attr_dev(label1, "class", "svelte-pnda70");
+    			attr_dev(label1, "class", "svelte-fzx7t4");
     			add_location(label1, file$1, 28, 1, 381);
-    			attr_dev(main, "class", "svelte-pnda70");
+    			attr_dev(main, "class", "svelte-fzx7t4");
     			add_location(main, file$1, 17, 0, 229);
 
     			dispose = [
