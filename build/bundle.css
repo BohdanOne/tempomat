@@ -1,6 +1,7 @@
-header.svelte-lactav{background:#230444;margin:1em 0;padding:1em;font-size:14px;border-radius:1em;box-shadow:5px 5px 9px hsla(269, 89%, 4%, .1),
-      -5px -5px 9px hsla(269, 89%, 60%, .1)}.main-heading.svelte-lactav{display:flex;justify-content:center;align-items:center}h1.svelte-lactav{color:#ed8240;font-size:3.2em;font-weight:300;line-height:1.1;text-transform:uppercase;margin:0}h2.svelte-lactav{color:#d2ebe9;margin:0;font-size:.8em;font-weight:200;text-align:center}img.svelte-lactav{height:2.5em;padding:.5em}@media(min-width: 500px){h1.svelte-lactav{font-size:5em}img.svelte-lactav{height:3rem}h2.svelte-lactav{font-size:1.3em}}
-main.svelte-fzx7t4{text-align:center;padding:1em;margin:1em 0;background:#230444;color:#d2ebe9;border-radius:1em;box-shadow:5px 5px 9px hsla(269, 89%, 4%, .1),
-      -5px -5px 9px hsla(269, 89%, 60%, .1)}input.svelte-fzx7t4{color:#230444;background:#d2ebe9;width:80px;border-radius:1em;outline-color:#ed8240;-moz-outline-radius:1em}label.svelte-fzx7t4{color:#d2ebe9}
+main.svelte-n3zbzb{display:flex;justify-content:space-between;overflow:visible}
+header.svelte-tc5gyp{background:#230444;margin:1em 0;padding:1em;font-size:14px;border-radius:1em;box-shadow:5px 5px 9px hsla(269, 89%, 4%, .1),
+      -5px -5px 9px hsla(269, 89%, 60%, .1)}.main-heading.svelte-tc5gyp{display:flex;justify-content:center;align-items:center}h1.svelte-tc5gyp{color:#ed8240;font-size:3.2em;font-weight:400;line-height:1.1;text-transform:uppercase;margin:0}h2.svelte-tc5gyp{color:#d2ebe9;margin:0;font-size:.8em;font-weight:300;text-align:center}img.svelte-tc5gyp{height:2.5em;padding:.5em}@media(min-width: 500px){h1.svelte-tc5gyp{font-size:5em}img.svelte-tc5gyp{height:3rem}h2.svelte-tc5gyp{font-size:1.3em}}
+section.svelte-ktau3o{width:38%;text-align:center;padding:2em;margin:1em 0;background:#230444;color:#d2ebe9;border-radius:1em;box-shadow:5px 5px 9px hsla(269, 89%, 4%, .1),
+      -5px -5px 9px hsla(269, 89%, 60%, .1)}input.svelte-ktau3o{color:#d2ebe9;background:#230444;width:200px;padding:.5em .1em;font-family:inherit;font-size:4em;font-weight:600;border:none;outline-color:#ed8240;-moz-outline-radius:5px;text-align:center}label.svelte-ktau3o{color:#d2ebe9;display:block;font-family:inherit;font-weight:300}
 
 /*# sourceMappingURL=bundle.css.map */
