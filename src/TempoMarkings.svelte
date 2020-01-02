@@ -27,16 +27,7 @@
 <style>
   section {
     font-weight: 300;
-    max-width: 600px;
-    text-align: center;
-    padding: 2em;
-    margin: 1em 0;
-    background: #230444;
-    color: #d2ebe9;
-    border-radius: 1em;
-    box-shadow:
-      5px 5px 9px hsla(269, 89%, 4%, .1),
-      -5px -5px 9px hsla(269, 89%, 60%, .1);
+    margin: 1em;
   }
 
   span {

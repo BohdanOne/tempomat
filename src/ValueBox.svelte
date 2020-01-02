@@ -19,24 +19,15 @@
       { value }
       on:input={handleInput}
     />
-    <p>
+    <h2>
       { valueName }
-    </p>
+    </h2>
   </label>
 </section>
 
 <style>
   section {
     width: 38%;
-    text-align: center;
-    padding: 2em;
-    margin: 1em 0;
-    background: #230444;
-    color: #d2ebe9;
-    border-radius: 1em;
-    box-shadow:
-      5px 5px 9px hsla(269, 89%, 4%, .1),
-      -5px -5px 9px hsla(269, 89%, 60%, .1);
   }
 
   input {
@@ -53,10 +44,19 @@
     text-align: center;
   }
 
-  label {
+  h2 {
     color: #d2ebe9;
     display: block;
     font-family: inherit;
+    font-size: 1em;
     font-weight: 300;
+  }
+  @media (max-width: 500px) {
+    input {
+      font-size: 2em;
+      width: 120px;
+      padding: .5em 0;
+      margin: 0 auto;
+    }
   }
 </style>

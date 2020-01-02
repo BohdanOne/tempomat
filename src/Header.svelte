@@ -9,7 +9,7 @@
 <style>
   header {
     background: #230444;
-    margin: 1em 0;
+    margin: 1em;
     padding: 1em;
     font-size: 14px;
     border-radius: 1em;

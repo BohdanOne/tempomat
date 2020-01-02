@@ -31,8 +31,6 @@
 		/>
 	</div>
 	<TempoMarkings bpm={ bpm } />
-
-		<!-- At {bpm}bpm one quarter note have a duration of {ms}ms. -->
 </main>
 
 <style>
@@ -41,5 +39,11 @@
 		display: flex;
 		justify-content: space-between;
 		overflow: visible;
+	}
+	@media (max-width: 500px) {
+		.value-boxes {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 </style>
