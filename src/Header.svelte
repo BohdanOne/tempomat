@@ -27,7 +27,7 @@
   h1 {
     color: #ed8240;
     font-size: 3.2em;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.1;
     text-transform: uppercase;
     margin: 0;
@@ -37,7 +37,7 @@
     color: #d2ebe9;
     margin: 0;
     font-size: .8em;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
   }
 
