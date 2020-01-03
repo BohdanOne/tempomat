@@ -18,25 +18,16 @@
     }
 </script>
 
-<section>
+<section class="box">
+  <h3>Tempo Marking</h3>
   <p>
-    This is in range of <span>{ tempo }</span> tempo marking.
+    { tempo }
   </p>
 </section>
 
 <style>
-  section {
-    font-weight: 300;
-    margin: 1em auto;
-  }
-
-  span {
+  p {
     font-style: italic;
-  }
-
-  @media (max-width: 600px) {
-    section {
-      width: 38%;
-    }
+    font-weight: 300;
   }
 </style>

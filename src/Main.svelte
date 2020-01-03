@@ -1,5 +1,6 @@
 <script>
 	import ValueBox from './ValueBox.svelte';
+	import SubdivisionPicker from './SubdivisionPicker.svelte';
 	import TempoMarkings from './TempoMarkings.svelte';
 
 	let bpm = 120;
@@ -18,32 +19,29 @@
 </script>
 
 <main>
-	<div class="value-boxes">
-		<ValueBox
-			valueName="Beats Per Minute"
-			value={ bpm }
-			on:input={ setBothFromBPM }
-		/>
-		<ValueBox
-			valueName="Milliseconds"
-			value={ ms }
-			on:input={ setBothFromMs }
-		/>
-	</div>
-	<TempoMarkings bpm={ bpm } />
+	<ValueBox
+		valueName="Beats Per Minute"
+		value={ bpm }
+		on:input={ setBothFromBPM }
+	/>
+	<ValueBox
+		valueName="Milliseconds"
+		value={ ms }
+		on:input={ setBothFromMs }
+	/>
+	<SubdivisionPicker />
+	<TempoMarkings { bpm } />
 </main>
 
 <style>
-	.value-boxes {
-		max-width: 600px;
-		display: flex;
-		justify-content: space-between;
-		overflow: visible;
+	main {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
 	}
+
 	@media (max-width: 600px) {
-		.value-boxes {
-			flex-direction: column;
-			align-items: center;
-		}
+		main { grid-template-columns: 1fr; }
 	}
 </style>

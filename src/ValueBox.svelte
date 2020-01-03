@@ -11,7 +11,7 @@
   }
 </script>
 
-<section>
+<section class="box">
   <label>
     <input
       type="number"
@@ -19,17 +19,13 @@
       { value }
       on:input={handleInput}
     />
-    <h2>
+    <h3>
       { valueName }
-    </h2>
+    </h3>
   </label>
 </section>
 
 <style>
-  section {
-    width: 38%;
-  }
-
   input {
     color: #d2ebe9;
     background: #230444;
@@ -44,13 +40,7 @@
     text-align: center;
   }
 
-  h2 {
-    color: #d2ebe9;
-    display: block;
-    font-family: inherit;
-    font-size: 1em;
-    font-weight: 300;
-  }
+
   @media (max-width: 600px) {
     input {
       font-size: 2em;

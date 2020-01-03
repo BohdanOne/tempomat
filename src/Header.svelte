@@ -1,4 +1,4 @@
-<header>
+<header class="box">
   <div class="main-heading">
 	  <img src="./assets/metronome.svg" alt="Colourfull metronome graphic"/>
 	  <h1>Tempomat</h1>
@@ -8,15 +8,9 @@
 
 <style>
   header {
-    background: #230444;
-    margin-bottom: 1em;
-    margin-top: 2em;
-    padding: 1em;
+    width: 100%;
     font-size: 14px;
-    border-radius: 1em;
-    box-shadow:
-      5px 5px 9px hsla(269, 89%, 4%, .1),
-      -5px -5px 9px hsla(269, 89%, 60%, .1);
+    margin: 2em auto;
   }
 
   .main-heading {
@@ -31,7 +25,6 @@
     font-weight: 400;
     line-height: 1.1;
     text-transform: uppercase;
-    margin: 0;
   }
 
   h2 {
@@ -43,13 +36,12 @@
   }
 
   img {
-		height: 2.5em;
-    padding: .5em;
+		height: 2.3em;
   }
 
   @media (min-width: 600px) {
     h1 { font-size: 5em; }
-    img { height: 3rem; }
+    img { height: 3.4em; }
     h2 { font-size: 1.3em; }
   }
 </style>
