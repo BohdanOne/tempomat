@@ -51,7 +51,7 @@
     font-size: 1em;
     font-weight: 300;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     input {
       font-size: 2em;
       width: 120px;

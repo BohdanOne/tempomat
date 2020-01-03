@@ -40,7 +40,7 @@
 		justify-content: space-between;
 		overflow: visible;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 600px) {
 		.value-boxes {
 			flex-direction: column;
 			align-items: center;

@@ -27,10 +27,16 @@
 <style>
   section {
     font-weight: 300;
-    margin: 1em;
+    margin: 1em auto;
   }
 
   span {
     font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    section {
+      width: 38%;
+    }
   }
 </style>

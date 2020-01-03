@@ -9,7 +9,8 @@
 <style>
   header {
     background: #230444;
-    margin: 1em;
+    margin-bottom: 1em;
+    margin-top: 2em;
     padding: 1em;
     font-size: 14px;
     border-radius: 1em;
@@ -46,7 +47,7 @@
     padding: .5em;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     h1 { font-size: 5em; }
     img { height: 3rem; }
     h2 { font-size: 1.3em; }
