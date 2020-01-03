@@ -367,15 +367,15 @@
     			h2.textContent = "Easily convert BeatsPerMinute to MilliSeconds";
     			if (img.src !== (img_src_value = "./assets/metronome.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Colourfull metronome graphic");
-    			attr_dev(img, "class", "svelte-16x4mp");
+    			attr_dev(img, "class", "svelte-1puk0yj");
     			add_location(img, file, 2, 3, 41);
-    			attr_dev(h1, "class", "svelte-16x4mp");
+    			attr_dev(h1, "class", "svelte-1puk0yj");
     			add_location(h1, file, 3, 3, 115);
-    			attr_dev(div, "class", "main-heading svelte-16x4mp");
+    			attr_dev(div, "class", "main-heading svelte-1puk0yj");
     			add_location(div, file, 1, 2, 11);
-    			attr_dev(h2, "class", "svelte-16x4mp");
+    			attr_dev(h2, "class", "svelte-1puk0yj");
     			add_location(h2, file, 5, 1, 143);
-    			attr_dev(header, "class", "svelte-16x4mp");
+    			attr_dev(header, "class", "svelte-1puk0yj");
     			add_location(header, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -446,12 +446,12 @@
     			attr_dev(input, "type", "number");
     			attr_dev(input, "min", "1");
     			input.value = /*value*/ ctx[1];
-    			attr_dev(input, "class", "svelte-ol09d5");
+    			attr_dev(input, "class", "svelte-r96w3e");
     			add_location(input, file$1, 15, 4, 270);
-    			attr_dev(h2, "class", "svelte-ol09d5");
+    			attr_dev(h2, "class", "svelte-r96w3e");
     			add_location(h2, file$1, 21, 4, 367);
     			add_location(label, file$1, 14, 2, 258);
-    			attr_dev(section, "class", "svelte-ol09d5");
+    			attr_dev(section, "class", "svelte-r96w3e");
     			add_location(section, file$1, 13, 0, 246);
     			dispose = listen_dev(input, "input", /*handleInput*/ ctx[2], false, false, false);
     		},
@@ -585,10 +585,10 @@
     			span = element("span");
     			t1 = text(/*tempo*/ ctx[0]);
     			t2 = text(" tempo marking.");
-    			attr_dev(span, "class", "svelte-e5vl5s");
+    			attr_dev(span, "class", "svelte-8oeyjv");
     			add_location(span, file$2, 22, 24, 622);
     			add_location(p, file$2, 21, 2, 594);
-    			attr_dev(section, "class", "svelte-e5vl5s");
+    			attr_dev(section, "class", "svelte-8oeyjv");
     			add_location(section, file$2, 20, 0, 582);
     		},
     		l: function claim(nodes) {
@@ -742,7 +742,7 @@
     			create_component(valuebox1.$$.fragment);
     			t1 = space();
     			create_component(tempomarkings.$$.fragment);
-    			attr_dev(div, "class", "value-boxes svelte-1lmmu85");
+    			attr_dev(div, "class", "value-boxes svelte-73ojp2");
     			add_location(div, file$3, 20, 1, 360);
     			add_location(main, file$3, 19, 0, 352);
     		},
