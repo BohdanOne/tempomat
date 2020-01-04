@@ -607,7 +607,7 @@
     			t1 = space();
     			option.__value = option_value_value = /*note*/ ctx[6];
     			option.value = option.__value;
-    			add_location(option, file$2, 17, 6, 486);
+    			add_location(option, file$2, 17, 6, 565);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -662,12 +662,12 @@
     			t2 = space();
     			t3 = text(/*ms*/ ctx[1]);
     			t4 = text(" ms");
-    			add_location(h3, file$2, 14, 2, 355);
+    			add_location(h3, file$2, 14, 2, 434);
     			attr_dev(select, "class", "svelte-ci5und");
     			if (/*subdivision*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
-    			add_location(select, file$2, 15, 2, 392);
+    			add_location(select, file$2, 15, 2, 471);
     			attr_dev(section, "class", "box svelte-ci5und");
-    			add_location(section, file$2, 13, 0, 331);
+    			add_location(section, file$2, 13, 0, 410);
 
     			dispose = [
     				listen_dev(select, "change", /*select_change_handler*/ ctx[5]),
@@ -745,7 +745,22 @@
     function instance$1($$self, $$props, $$invalidate) {
     	let { ms } = $$props;
     	let { subdivision } = $$props;
-    	const notes = ["whole", "half", "quarter", "eight", "sixteenth", "thirty-second"];
+
+    	const notes = [
+    		"whole",
+    		"whole T",
+    		"half",
+    		"half T",
+    		"quarter",
+    		"quarter T",
+    		"eight",
+    		"eight T",
+    		"sixteenth",
+    		"sixteenth T",
+    		"thirty-second",
+    		"thirty-second T"
+    	];
+
     	const dispatch = createEventDispatcher();
 
     	function handleSelect() {
@@ -1010,7 +1025,7 @@
     			t2 = space();
     			create_component(tempomarkings.$$.fragment);
     			attr_dev(main, "class", "svelte-nobnhr");
-    			add_location(main, file$4, 32, 0, 659);
+    			add_location(main, file$4, 38, 0, 907);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1118,11 +1133,17 @@
     		if ($$self.$$.dirty & /*ms*/ 2) {
     			 $$invalidate(3, msTable = {
     				"whole": ms * 4,
+    				"whole T": Math.round(ms * 8 / 3),
     				"half": ms * 2,
+    				"half T": Math.round(ms * 4 / 3),
     				"quarter": ms,
+    				"quarter T": Math.round(ms * 2 / 3),
     				"eight": ms / 2,
+    				"eight T": Math.round(ms / 3),
     				"sixteenth": ms / 4,
-    				"thirty-second": ms / 8
+    				"sixteenth T": Math.round(ms / 2 / 3),
+    				"thirty-second": ms / 8,
+    				"thirty-second T": Math.round(ms / 4 / 3)
     			});
     		}
     	};

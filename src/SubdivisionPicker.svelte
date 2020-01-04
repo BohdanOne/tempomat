@@ -3,7 +3,7 @@
   export let ms;
   export let subdivision;
 
-  const notes = ['whole', 'half', 'quarter', 'eight', 'sixteenth', 'thirty-second'];
+  const notes = ['whole', 'whole T', 'half', 'half T', 'quarter', 'quarter T', 'eight', 'eight T', 'sixteenth', 'sixteenth T', 'thirty-second', 'thirty-second T'];
   const dispatch = createEventDispatcher();
 
   function handleSelect() {

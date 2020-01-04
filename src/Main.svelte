@@ -7,12 +7,18 @@
 	let ms = 500;
 	let subdivision = 'quarter';
 	$: msTable = {
-		'whole': ms * 4,
-		'half': ms * 2,
-		'quarter': ms,
+		'whole' : ms * 4,
+		'whole T' : Math.round((ms * 8) / 3),
+		'half' : ms * 2,
+		'half T' : Math.round((ms * 4) / 3),
+		'quarter' : ms,
+		'quarter T' : Math.round((ms * 2) / 3),
 		'eight': ms / 2,
+		'eight T': Math.round(ms / 3),
 		'sixteenth': ms / 4,
-		'thirty-second': ms /8
+		'sixteenth T': Math.round((ms / 2) / 3),
+		'thirty-second': ms / 8,
+		'thirty-second T': Math.round((ms / 4) / 3)
 	};
 
 	function setBothFromBPM(event) {
