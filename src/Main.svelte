@@ -6,21 +6,28 @@
 	let bpm = 120;
 	let ms = 500;
 	let subdivision = 'quarter';
+	$: msTable = {
+		'whole': ms * 4,
+		'half': ms * 2,
+		'quarter': ms,
+		'eight': ms / 2,
+		'sixteenth': ms / 4,
+		'thirty-second': ms /8
+	};
 
 	function setBothFromBPM(event) {
 		bpm = +event.detail.value;
 		ms = Math.round(60000 / bpm);
-	}
+	};
 
 	function setBothFromMs(event) {
 		ms = +event.detail.value;
 		bpm = Math.round((60 / ms) * 1000);
-	}
+	};
 
 	function setSubdivision(event) {
-		selected = event.detail.value;
-	}
-
+		subdivision = event.detail.value;
+	};
 </script>
 
 <main>
@@ -30,11 +37,15 @@
 		on:input={ setBothFromBPM }
 	/>
 	<ValueBox
-		valueName="Milliseconds"
+		valueName="Milliseconds (at quarter note subdivision)"
 		value={ ms }
 		on:input={ setBothFromMs }
 	/>
-	<SubdivisionPicker {subdivision} on:input={setSubdivision}/>
+	<SubdivisionPicker
+		{subdivision}
+		ms={msTable[subdivision]}
+		on:input={setSubdivision}
+	/>
 	<TempoMarkings {bpm} />
 </main>
 

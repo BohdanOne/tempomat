@@ -1,7 +1,8 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-
+  export let ms;
   export let subdivision;
+
   const notes = ['whole', 'half', 'quarter', 'eight', 'sixteenth', 'thirty-second'];
   const dispatch = createEventDispatcher();
 
@@ -11,7 +12,7 @@
 </script>
 
 <section class="box">
-  <h3>Choose subdivision</h3>
+  <h3>Choose other subdivision:</h3>
   <select bind:value={ subdivision } on:input={ handleSelect }>
     {#each notes as note}
       <option value={ note }>
@@ -19,6 +20,7 @@
       </option>
     {/each}
   </select>
+  {ms}ms
 </section>
 
 <style>
@@ -26,7 +28,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    width: 120px;
+    width: 145px;
     padding: 1em;
     border: none;
     background: #230444;

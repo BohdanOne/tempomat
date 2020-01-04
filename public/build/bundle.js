@@ -466,11 +466,11 @@
     			attr_dev(input, "min", "1");
     			input.value = /*value*/ ctx[1];
     			attr_dev(input, "class", "svelte-3zjt3g");
-    			add_location(input, file$1, 15, 4, 282);
-    			add_location(h3, file$1, 21, 4, 379);
-    			add_location(label, file$1, 14, 2, 270);
+    			add_location(input, file$1, 14, 4, 281);
+    			add_location(h3, file$1, 20, 4, 378);
+    			add_location(label, file$1, 13, 2, 269);
     			attr_dev(section, "class", "box");
-    			add_location(section, file$1, 13, 0, 246);
+    			add_location(section, file$1, 12, 0, 245);
     			dispose = listen_dev(input, "input", /*handleInput*/ ctx[2], false, false, false);
     		},
     		l: function claim(nodes) {
@@ -588,14 +588,14 @@
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[5] = list[i];
+    	child_ctx[6] = list[i];
     	return child_ctx;
     }
 
-    // (16:4) {#each notes as note}
+    // (17:4) {#each notes as note}
     function create_each_block(ctx) {
     	let option;
-    	let t0_value = /*note*/ ctx[5] + "";
+    	let t0_value = /*note*/ ctx[6] + "";
     	let t0;
     	let t1;
     	let option_value_value;
@@ -605,9 +605,9 @@
     			option = element("option");
     			t0 = text(t0_value);
     			t1 = space();
-    			option.__value = option_value_value = /*note*/ ctx[5];
+    			option.__value = option_value_value = /*note*/ ctx[6];
     			option.value = option.__value;
-    			add_location(option, file$2, 16, 6, 462);
+    			add_location(option, file$2, 17, 6, 486);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -624,7 +624,7 @@
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(16:4) {#each notes as note}",
+    		source: "(17:4) {#each notes as note}",
     		ctx
     	});
 
@@ -636,8 +636,11 @@
     	let h3;
     	let t1;
     	let select;
+    	let t2;
+    	let t3;
+    	let t4;
     	let dispose;
-    	let each_value = /*notes*/ ctx[1];
+    	let each_value = /*notes*/ ctx[2];
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -648,7 +651,7 @@
     		c: function create() {
     			section = element("section");
     			h3 = element("h3");
-    			h3.textContent = "Choose subdivision";
+    			h3.textContent = "Choose other subdivision:";
     			t1 = space();
     			select = element("select");
 
@@ -656,16 +659,19 @@
     				each_blocks[i].c();
     			}
 
-    			add_location(h3, file$2, 13, 2, 338);
-    			attr_dev(select, "class", "svelte-b2iy0n");
-    			if (/*subdivision*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[4].call(select));
-    			add_location(select, file$2, 14, 2, 368);
+    			t2 = space();
+    			t3 = text(/*ms*/ ctx[1]);
+    			t4 = text("ms");
+    			add_location(h3, file$2, 14, 2, 355);
+    			attr_dev(select, "class", "svelte-1kyj8lg");
+    			if (/*subdivision*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
+    			add_location(select, file$2, 15, 2, 392);
     			attr_dev(section, "class", "box");
-    			add_location(section, file$2, 12, 0, 314);
+    			add_location(section, file$2, 13, 0, 331);
 
     			dispose = [
-    				listen_dev(select, "change", /*select_change_handler*/ ctx[4]),
-    				listen_dev(select, "input", /*handleSelect*/ ctx[2], false, false, false)
+    				listen_dev(select, "change", /*select_change_handler*/ ctx[5]),
+    				listen_dev(select, "input", /*handleSelect*/ ctx[3], false, false, false)
     			];
     		},
     		l: function claim(nodes) {
@@ -682,10 +688,13 @@
     			}
 
     			select_option(select, /*subdivision*/ ctx[0]);
+    			append_dev(section, t2);
+    			append_dev(section, t3);
+    			append_dev(section, t4);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*notes*/ 2) {
-    				each_value = /*notes*/ ctx[1];
+    			if (dirty & /*notes*/ 4) {
+    				each_value = /*notes*/ ctx[2];
     				let i;
 
     				for (i = 0; i < each_value.length; i += 1) {
@@ -710,6 +719,8 @@
     			if (dirty & /*subdivision*/ 1) {
     				select_option(select, /*subdivision*/ ctx[0]);
     			}
+
+    			if (dirty & /*ms*/ 2) set_data_dev(t3, /*ms*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,
@@ -732,6 +743,7 @@
     }
 
     function instance$1($$self, $$props, $$invalidate) {
+    	let { ms } = $$props;
     	let { subdivision } = $$props;
     	const notes = ["whole", "half", "quarter", "eight", "sixteenth", "thirty-second"];
     	const dispatch = createEventDispatcher();
@@ -741,7 +753,7 @@
     	}
 
     	
-    	const writable_props = ["subdivision"];
+    	const writable_props = ["ms", "subdivision"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<SubdivisionPicker> was created with unknown prop '${key}'`);
@@ -750,28 +762,30 @@
     	function select_change_handler() {
     		subdivision = select_value(this);
     		$$invalidate(0, subdivision);
-    		$$invalidate(1, notes);
+    		$$invalidate(2, notes);
     	}
 
     	$$self.$set = $$props => {
+    		if ("ms" in $$props) $$invalidate(1, ms = $$props.ms);
     		if ("subdivision" in $$props) $$invalidate(0, subdivision = $$props.subdivision);
     	};
 
     	$$self.$capture_state = () => {
-    		return { subdivision };
+    		return { ms, subdivision };
     	};
 
     	$$self.$inject_state = $$props => {
+    		if ("ms" in $$props) $$invalidate(1, ms = $$props.ms);
     		if ("subdivision" in $$props) $$invalidate(0, subdivision = $$props.subdivision);
     	};
 
-    	return [subdivision, notes, handleSelect, dispatch, select_change_handler];
+    	return [subdivision, ms, notes, handleSelect, dispatch, select_change_handler];
     }
 
     class SubdivisionPicker extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$2, safe_not_equal, { subdivision: 0 });
+    		init(this, options, instance$1, create_fragment$2, safe_not_equal, { ms: 1, subdivision: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -783,9 +797,21 @@
     		const { ctx } = this.$$;
     		const props = options.props || ({});
 
+    		if (/*ms*/ ctx[1] === undefined && !("ms" in props)) {
+    			console.warn("<SubdivisionPicker> was created without expected prop 'ms'");
+    		}
+
     		if (/*subdivision*/ ctx[0] === undefined && !("subdivision" in props)) {
     			console.warn("<SubdivisionPicker> was created without expected prop 'subdivision'");
     		}
+    	}
+
+    	get ms() {
+    		throw new Error("<SubdivisionPicker>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set ms(value) {
+    		throw new Error("<SubdivisionPicker>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get subdivision() {
@@ -816,11 +842,11 @@
     			t1 = space();
     			p = element("p");
     			t2 = text(/*tempo*/ ctx[0]);
-    			add_location(h3, file$3, 21, 2, 606);
+    			add_location(h3, file$3, 22, 2, 609);
     			attr_dev(p, "class", "svelte-hlw1vl");
-    			add_location(p, file$3, 22, 2, 639);
+    			add_location(p, file$3, 23, 2, 642);
     			attr_dev(section, "class", "box");
-    			add_location(section, file$3, 20, 0, 582);
+    			add_location(section, file$3, 21, 0, 585);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -946,24 +972,27 @@
     			$$inline: true
     		});
 
-    	valuebox0.$on("input", /*setBothFromBPM*/ ctx[3]);
+    	valuebox0.$on("input", /*setBothFromBPM*/ ctx[4]);
 
     	const valuebox1 = new ValueBox({
     			props: {
-    				valueName: "Milliseconds",
+    				valueName: "Milliseconds (at quarter note subdivision)",
     				value: /*ms*/ ctx[1]
     			},
     			$$inline: true
     		});
 
-    	valuebox1.$on("input", /*setBothFromMs*/ ctx[4]);
+    	valuebox1.$on("input", /*setBothFromMs*/ ctx[5]);
 
     	const subdivisionpicker = new SubdivisionPicker({
-    			props: { subdivision: /*subdivision*/ ctx[2] },
+    			props: {
+    				subdivision: /*subdivision*/ ctx[2],
+    				ms: /*msTable*/ ctx[3][/*subdivision*/ ctx[2]]
+    			},
     			$$inline: true
     		});
 
-    	subdivisionpicker.$on("input", setSubdivision);
+    	subdivisionpicker.$on("input", /*setSubdivision*/ ctx[6]);
 
     	const tempomarkings = new TempoMarkings({
     			props: { bpm: /*bpm*/ ctx[0] },
@@ -981,7 +1010,7 @@
     			t2 = space();
     			create_component(tempomarkings.$$.fragment);
     			attr_dev(main, "class", "svelte-nobnhr");
-    			add_location(main, file$4, 25, 0, 513);
+    			add_location(main, file$4, 32, 0, 659);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1004,6 +1033,10 @@
     			const valuebox1_changes = {};
     			if (dirty & /*ms*/ 2) valuebox1_changes.value = /*ms*/ ctx[1];
     			valuebox1.$set(valuebox1_changes);
+    			const subdivisionpicker_changes = {};
+    			if (dirty & /*subdivision*/ 4) subdivisionpicker_changes.subdivision = /*subdivision*/ ctx[2];
+    			if (dirty & /*msTable, subdivision*/ 12) subdivisionpicker_changes.ms = /*msTable*/ ctx[3][/*subdivision*/ ctx[2]];
+    			subdivisionpicker.$set(subdivisionpicker_changes);
     			const tempomarkings_changes = {};
     			if (dirty & /*bpm*/ 1) tempomarkings_changes.bpm = /*bpm*/ ctx[0];
     			tempomarkings.$set(tempomarkings_changes);
@@ -1043,10 +1076,6 @@
     	return block;
     }
 
-    function setSubdivision(event) {
-    	selected = event.detail.value;
-    }
-
     function instance$3($$self, $$props, $$invalidate) {
     	let bpm = 120;
     	let ms = 500;
@@ -1057,10 +1086,20 @@
     		$$invalidate(1, ms = Math.round(60000 / bpm));
     	}
 
+    	
+
     	function setBothFromMs(event) {
     		$$invalidate(1, ms = +event.detail.value);
     		$$invalidate(0, bpm = Math.round(60 / ms * 1000));
     	}
+
+    	
+
+    	function setSubdivision(event) {
+    		$$invalidate(2, subdivision = event.detail.value);
+    	}
+
+    	
 
     	$$self.$capture_state = () => {
     		return {};
@@ -1070,9 +1109,25 @@
     		if ("bpm" in $$props) $$invalidate(0, bpm = $$props.bpm);
     		if ("ms" in $$props) $$invalidate(1, ms = $$props.ms);
     		if ("subdivision" in $$props) $$invalidate(2, subdivision = $$props.subdivision);
+    		if ("msTable" in $$props) $$invalidate(3, msTable = $$props.msTable);
     	};
 
-    	return [bpm, ms, subdivision, setBothFromBPM, setBothFromMs];
+    	let msTable;
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*ms*/ 2) {
+    			 $$invalidate(3, msTable = {
+    				"whole": ms * 4,
+    				"half": ms * 2,
+    				"quarter": ms,
+    				"eight": ms / 2,
+    				"sixteenth": ms / 4,
+    				"thirty-second": ms / 8
+    			});
+    		}
+    	};
+
+    	return [bpm, ms, subdivision, msTable, setBothFromBPM, setBothFromMs, setSubdivision];
     }
 
     class Main extends SvelteComponentDev {

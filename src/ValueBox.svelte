@@ -1,6 +1,5 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-
   export let valueName;
   export let value;
 

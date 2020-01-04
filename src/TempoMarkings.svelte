@@ -1,5 +1,6 @@
 <script>
   export let bpm;
+  
   $: tempo = defineTempo(bpm);
 
   function defineTempo(bpm) {
