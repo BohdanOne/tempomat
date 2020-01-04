@@ -37,7 +37,7 @@
 		on:input={ setBothFromBPM }
 	/>
 	<ValueBox
-		valueName="Milliseconds (at quarter note subdivision)"
+		valueName="Milliseconds (quarter note)"
 		value={ ms }
 		on:input={ setBothFromMs }
 	/>

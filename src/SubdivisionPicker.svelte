@@ -20,10 +20,13 @@
       </option>
     {/each}
   </select>
-  {ms}ms
+  {ms} ms
 </section>
 
 <style>
+section {
+  font-weight: 300;
+}
   select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -35,7 +38,6 @@
     outline-color: #ed8240;
     color: #d2ebe9;
     font-family: inherit;
-    font-weight: 300;
     font-style: italic;
     font-size: 1em;
   }
