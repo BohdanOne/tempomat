@@ -5,6 +5,7 @@
 
 	let bpm = 120;
 	let ms = 500;
+	let subdivision = 'quarter';
 
 	function setBothFromBPM(event) {
 		bpm = +event.detail.value;
@@ -14,7 +15,11 @@
 	function setBothFromMs(event) {
 		ms = +event.detail.value;
 		bpm = Math.round((60 / ms) * 1000);
-  }
+	}
+
+	function setSubdivision(event) {
+		selected = event.detail.value;
+	}
 
 </script>
 
@@ -29,8 +34,8 @@
 		value={ ms }
 		on:input={ setBothFromMs }
 	/>
-	<SubdivisionPicker />
-	<TempoMarkings { bpm } />
+	<SubdivisionPicker {subdivision} on:input={setSubdivision}/>
+	<TempoMarkings {bpm} />
 </main>
 
 <style>

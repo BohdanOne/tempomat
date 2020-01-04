@@ -19,7 +19,7 @@
 </script>
 
 <section class="box">
-  <h3>Tempo Marking</h3>
+  <h3>Current Tempo Marking</h3>
   <p>
     { tempo }
   </p>
@@ -29,5 +29,6 @@
   p {
     font-style: italic;
     font-weight: 300;
+    margin-top: 1em;
   }
 </style>

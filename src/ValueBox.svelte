@@ -36,7 +36,6 @@
     font-weight: 600;
     border: none;
     outline-color: #ed8240;
-    -moz-outline-radius: 5px;
     text-align: center;
   }
 
