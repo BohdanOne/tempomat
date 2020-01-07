@@ -1,6 +1,6 @@
 <script>
   export let bpm;
-  
+
   $: tempo = defineTempo(bpm);
 
   function defineTempo(bpm) {
@@ -14,7 +14,7 @@
       if (bpm < 156) return 'Allegro';
       if (bpm < 176) return 'Vivace';
       if (bpm < 200) return 'Presto';
-      if (bpm <= 200) return 'Prestissimo';
+      if (bpm >= 200) return 'Prestissimo';
       else return 'choose your tempo';
     }
 </script>
